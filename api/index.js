@@ -1,9 +1,10 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
 
-app.use(express.static("public"));
+app.use(express.static("../public"));
 app.use(cors());
 
 const categories = [
@@ -144,7 +145,7 @@ const DB = [
 ];
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "index.html");
+    res.sendFile(path.join(__dirname, "../index.html"));
 });
 
 app.get("/faq", (req, res) => {
@@ -214,7 +215,7 @@ app.get("/faq", (req, res) => {
 });
 
 app.listen(3000, () => {
-    console.log("Running on port 5000.");
+    console.log("Running on port 3000.");
 });
 
 module.exports = app;
