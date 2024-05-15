@@ -3,8 +3,21 @@
     "builds": [
         {
             "src": "app.js",
-            "use": "@now/node"
+            "use": "@vercel/node"
+        },
+        {
+            "src": "public/**",
+            "use": "@vercel/static"
         }
     ],
-    "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+    "routes": [
+        {
+            "src": "/",
+            "dest": "app.js"
+        },
+        {
+            "src": "/(.+)",
+            "dest": "public/$1"
+        }
+    ]
 }
