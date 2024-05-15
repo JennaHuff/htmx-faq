@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5vw;
+    color: #cccccc;
+    background-color: #222222;
+    font-size: calc(15px + 0.390625vw);
+}
+#nav-faq-container {
+    display: flex;
+
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 5vw;
+}
+
+#title {
+    font-family: Lora;
+    font-style: oblique;
+    font-size: 2.5em;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+#faq {
+    width: 40%;
+    flex-grow: 1;
+    min-width: 310px;
+    font-size: 1em;
+}
+
+#faq h2 {
+    font-family: Montserrat;
+    font-weight: 700;
+    cursor: pointer;
+    width: fit-content;
+}
+#toggle-visibility-icon {
+    user-select: none;
+}
+
+#faq p {
+    font-family: Hind Madurai;
+    font-weight: 300;
+}
+
+nav {
+    cursor: pointer;
+    user-select: none;
+    font-family: Lora;
+    font-style: oblique;
+    font-size: 1em;
+}
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.active-category {
+    /* font-weight: bold; */
+    opacity: 0.7;
+}
